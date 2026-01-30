@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Botero Tech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #0d1117; /* GitHub Dark Mode Background */
+            --bg-color: #0d1117;
             --text-color: #c9d1d9;
             --btn-bg: #21262d;
             --btn-border: #30363d;
@@ -23,14 +24,15 @@
             justify-content: center;
             min-height: 100vh;
             margin: 0;
+            
+            /* Vertical adjustment */
             padding: 20px;
             padding-bottom: 15vh;
             box-sizing: border-box;
-
         }
         .container {
             text-align: center;
-            max-width: 400px;
+            max-width: 420px; /* Slightly wider to accommodate the new text */
             width: 100%;
         }
         img {
@@ -39,12 +41,26 @@
             border-radius: 50%;
             border: 2px solid var(--btn-border);
             margin-bottom: 15px;
+            object-fit: cover;
         }
-        h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        p { color: #8b949e; margin-bottom: 2rem; }
+        h1 { 
+            font-size: 1.6rem; 
+            margin-bottom: 1rem; 
+            font-weight: 700;
+        }
+        p { 
+            color: #8b949e; 
+            margin-bottom: 2rem; 
+            line-height: 1.6; /* Adds breathing room for the skill list */
+            font-size: 0.95rem;
+        }
         
         .link-btn {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            
             background-color: var(--btn-bg);
             border: 1px solid var(--btn-border);
             color: var(--text-color);
@@ -60,20 +76,41 @@
             color: var(--accent);
             transform: translateY(-2px);
         }
+        .link-btn i {
+            font-size: 1.2rem;
+        }
+        
         .footer { margin-top: 30px; font-size: 0.8rem; color: #484f58; }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://github.com/lmiguelbv.png" alt="Miguel Botero"> 
+        <img src="profile.png" alt="Miguel Botero"> 
         
-        <h1>Miguel Botero</h1>
-        <p>Cloud & Hybrid Infrastructure Ops | Security-Focused | Linux Admin - Docker - VMs - IaaS - Networking | AWS - Azure - GCP | DevOps Aspirant</p>
+        <h1>Miguel Botero Tech</h1>
+        
+        <p>
+            Cloud & Hybrid Infrastructure Ops | Security-Focused <br>
+            Linux Admin - Docker - VMs - IaaS - Networking <br>
+            AWS - Azure - GCP <br>
+            DevOps Aspirant
+        </p>
 
-        <a href="https://www.linkedin.com/in/miguel-botero-509373110/" class="link-btn" target="_blank">LinkedIn Profile</a>
-        <a href="https://drive.google.com/file/d/1ZRDCahKRvCWaPsWEB9mI6FljwksaA4IX/view?usp=sharing" class="link-btn" target="_blank">View/Download CV (PDF)</a>
-        <a href="https://github.com/lmiguelbv" class="link-btn" target="_blank">GitHub Portfolio</a>
-        <a href="mailto:miguelbotero59@gmail.com" class="link-btn">📧 Contact Me</a>
+        <a href="https://www.linkedin.com/in/miguel-botero-509373110/" class="link-btn" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn Profile
+        </a>
+        
+        <a href="cv.pdf" class="link-btn" target="_blank">
+            <i class="fas fa-file-pdf"></i> Download CV
+        </a>
+        
+        <a href="https://github.com/lmiguelbv" class="link-btn" target="_blank">
+            <i class="fab fa-github"></i> GitHub Portfolio
+        </a>
+        
+        <a href="mailto:miguelbotero59@gmail.com" class="link-btn">
+            <i class="fas fa-envelope"></i> Contact Me
+        </a>
         
         <div class="footer">
             Hosted on GitHub Pages
