@@ -68,40 +68,39 @@
             backdrop-filter: blur(8px); 
         }
 
-	/* --- MOBILE OPTIMIZATION (FULL SCREEN MODE) --- */
+	/* --- MOBILE OPTIMIZATION (FULL SCREEN & CENTERED) --- */
         @media (max-width: 600px) {
             body {
-                /* 1. Remove ALL outer spacing so the container touches the edges */
-                padding: 0 !important; 
+                padding: 0 !important;
             }
             
             .container {
-                /* 2. Force the container to be at least as tall as the screen */
+                /* Force full height */
                 min-height: 100vh;
                 
-                /* 3. Remove rounded corners since it now touches the screen edges */
+                /* Remove borders for clean mobile look */
                 border-radius: 0;
+                border: none;
                 
-                /* 4. Remove the side borders if you want a clean "app-like" look 
-                   (Or keep them if you want a border around your screen) */
-                border-left: none;
-                border-right: none;
-                border-top: none; 
-                border-bottom: none;
-                
-                /* 5. Ensure content is still centered vertically inside the full screen */
+                /* Flexbox for centering */
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: center; /* Centers Vertically */
+                align-items: center;     /* Centers Horizontally (This fixes the left alignment) */
             }
             
-            /* Adjust text sizes for smaller screens */
+            /* Force buttons to stay wide on mobile */
+            .link-btn {
+                width: 100%;
+                box-sizing: border-box; /* Ensures padding doesn't break width */
+            }
+            
             h1 { font-size: 1.6rem; }
             h4 { font-size: 0.9rem; }
         }
-        /* ---------------------------------------------- */
+        /* ---------------------------------------------------- */        
         
-        img {
+	img {
             width: 120px;
             height: 120px;
             border-radius: 50%;
