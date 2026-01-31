@@ -36,15 +36,14 @@
             min-height: 100vh;
             margin: 0;
             
-            /* Spacing */
+            /* DEFAULT (Desktop) Spacing */
             padding: 20px;
             padding-bottom: 10vh;
             box-sizing: border-box;
 
-            /* --- BACKGROUND: THE SERVER RACKS --- */
+            /* --- BACKGROUND --- */
             background-color: var(--bg-deep);
             background-image: url('server-racks.png'); 
-            
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -56,19 +55,35 @@
             max-width: 420px;
             width: 100%;
             
-            /* --- CONTAINER: TRANSPARENT NEON FRAME --- */
+            /* Container Style */
             background-color: rgba(22, 27, 34, 0.80); 
-            
             padding: 40px 30px;
             border-radius: 16px;
             
-            /* The Border & Glow */
+            /* Border & Glow */
             border: 2px solid var(--neon-cyan);
             box-shadow: 0 0 15px rgba(0, 243, 255, 0.15), 
                         0 0 50px rgba(188, 19, 254, 0.15);
             
             backdrop-filter: blur(8px); 
         }
+
+        /* --- MOBILE OPTIMIZATION (New Code) --- */
+        @media (max-width: 600px) {
+            body {
+                /* Reduce outer space so card fills the screen */
+                padding: 15px; 
+                /* Remove the bottom lift so it centers perfectly on small screens */
+                padding-bottom: 15px; 
+            }
+            .container {
+                /* Reduce internal space so content fits without scrolling */
+                padding: 30px 20px;
+            }
+            h1 { font-size: 1.6rem; } /* Slightly smaller title for mobile */
+            h4 { font-size: 0.9rem; }
+        }
+        /* -------------------------------------- */
         
         img {
             width: 120px;
@@ -79,23 +94,21 @@
             object-fit: cover;
         }
         
-        /* UPDATED: Main Header */
         h1 { 
-            font-size: 1.8rem; /* Slightly larger for the short brand name */
-            margin-bottom: 0.2rem; /* Reduced gap between H1 and H4 */
+            font-size: 1.8rem; 
+            margin-bottom: 0.2rem; 
             font-weight: 700;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
             letter-spacing: 1px;
         }
 
-        /* NEW: Subtitle Style */
         h4 {
             font-size: 1rem;
             margin-top: 0;
             margin-bottom: 1.5rem;
-            color: var(--neon-cyan); /* Cyan color to make the name pop */
+            color: var(--neon-cyan);
             font-weight: 500;
-            text-transform: uppercase; /* Clean, technical look */
+            text-transform: uppercase;
             letter-spacing: 0.5px;
             text-shadow: 0 1px 2px rgba(0,0,0,0.8);
         }
@@ -151,7 +164,7 @@
             Cloud & Hybrid Infrastructure Ops | Security-Focused <br>
             Linux Admin - Docker - VMs - IaaS - Networking <br>
             AWS - Azure - GCP <br>
-            DevOps Aspirant
+            Junior DevOps
         </p>
 
         <a href="https://www.linkedin.com/in/miguel-botero-509373110/" class="link-btn" target="_blank">
