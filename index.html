@@ -7,165 +7,9 @@
     
     <link rel="icon" type="image/png" href="profile.png">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     
-    <style>
-        :root {
-            /* --- COLOR PALETTE --- */
-            --bg-deep: #050505;       /* Deepest Black */
-            
-            /* Synthwave Accents */
-            --neon-cyan: #00f3ff;
-            --neon-purple: #bc13fe;
-            
-            /* Text & Buttons */
-            --text-color: #c9d1d9;
-            --btn-bg: #21262d;
-            --btn-border: #30363d;
-            --btn-hover: #D4AF37;     /* Gold Hover */
-            --accent: #D4AF37;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            
-            /* DEFAULT (Desktop) Spacing */
-            padding: 20px;
-            padding-bottom: 10vh;
-            box-sizing: border-box;
-
-            /* --- BACKGROUND --- */
-            background-color: var(--bg-deep);
-            background-image: url('server-racks.png'); 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-        
-        .container {
-            text-align: center;
-            max-width: 420px;
-            width: 100%;
-            
-            /* Container Style */
-            background-color: rgba(22, 27, 34, 0.80); 
-            padding: 40px 30px;
-            border-radius: 16px;
-            
-            /* Border & Glow */
-            border: 2px solid var(--neon-cyan);
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.15), 
-                        0 0 50px rgba(188, 19, 254, 0.15);
-            
-            backdrop-filter: blur(8px); 
-        }
-
-	/* --- MOBILE OPTIMIZATION (FULL SCREEN & CENTERED) --- */
-        @media (max-width: 600px) {
-            body {
-                padding: 0 !important;
-            }
-            
-            .container {
-                /* Force full height */
-                min-height: 100vh;
-                
-                /* Remove borders for clean mobile look */
-                border-radius: 0;
-                border: none;
-                
-                /* Flexbox for centering */
-                display: flex;
-                flex-direction: column;
-                justify-content: center; /* Centers Vertically */
-                align-items: center;     /* Centers Horizontally (This fixes the left alignment) */
-            }
-            
-            /* Force buttons to stay wide on mobile */
-            .link-btn {
-                width: 100%;
-                box-sizing: border-box; /* Ensures padding doesn't break width */
-            }
-            
-            h1 { font-size: 1.6rem; }
-            h4 { font-size: 0.9rem; }
-        }
-        /* ---------------------------------------------------- */        
-        
-	img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 2px solid var(--btn-border);
-            margin-bottom: 15px;
-            object-fit: cover;
-        }
-        
-        h1 { 
-            font-size: 1.8rem; 
-            margin-bottom: 0.2rem; 
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-            letter-spacing: 1px;
-        }
-
-        h4 {
-            font-size: 1rem;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            color: var(--neon-cyan);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.8);
-        }
-
-        p { 
-            color: #c9d1d9;
-            margin-bottom: 2rem; 
-            line-height: 1.6;
-            font-size: 0.95rem;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.8);
-        }
-        
-        .link-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            
-            background-color: rgba(33, 38, 45, 0.9);
-            border: 1px solid var(--btn-border);
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 15px;
-            margin-bottom: 12px;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            backdrop-filter: blur(4px);
-        }
-        .link-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-            background-color: rgba(33, 38, 45, 1);
-        }
-        .link-btn i {
-            font-size: 1.2rem;
-        }
-        
-        .footer { margin-top: 30px; font-size: 0.8rem; color: #c9d1d9; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -177,7 +21,11 @@
         
         <p>
             Cloud & Infrastructure Operations Associate <br>
+<<<<<<< Updated upstream
 	    DevOps Practitioner <br>
+=======
+            DevOps Practitioner <br>
+>>>>>>> Stashed changes
             Linux Admin - Docker - VMs - IaaS - Networking <br>
             AWS - Azure - GCP <br>
         </p>
@@ -186,10 +34,27 @@
             <i class="fab fa-linkedin"></i> LinkedIn Profile
         </a>
         
-        <a href="https://drive.google.com/file/d/1Pl7h3qvZ2h3FTi7YX-Z4cKNHhCZBvkci/view?usp=sharing" class="link-btn" target="_blank">
-            <i class="fas fa-file-pdf"></i> Download CV
-        </a>
+        <div class="cv-split-wrapper">
+            <div class="cv-split-btn">
+                <a href="https://drive.google.com/file/d/1Pl7h3qvZ2h3FTi7YX-Z4cKNHhCZBvkci/view?usp=sharing" class="cv-main-action">
+                    <span><i class="fas fa-file-pdf" style="margin-right:8px;"></i> Download CV</span>
+                </a>
         
+                <div class="cv-separator"></div>
+        
+                <button class="cv-toggle-action" id="cvDropdownBtn" aria-label="More Options">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        
+            <div class="cv-dropdown" id="cvDropdown">
+                <a href="https://drive.google.com/file/d/1O2tGgfLK2cml69-lDQJmKmhw5t68dlK0/view?usp=sharing" class="cv-dropdown-item">
+                    <span class="icon">🎨</span> Download Enhanced Layout
+                </a>
+            </div>
+        </div>
         <a href="https://github.com/lmiguelbv" class="link-btn" target="_blank">
             <i class="fab fa-github"></i> GitHub Portfolio
         </a>
@@ -202,5 +67,7 @@
             Hosted on GitHub Pages
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
