@@ -4,7 +4,7 @@
     --neon-purple: #bc13fe;
     --text-color: #c9d1d9;
     --btn-bg: rgba(33, 38, 45, 0.9);
-    --btn-border: #30363d; /* Subtle dark border */
+    --btn-border: #30363d; 
     --accent: #D4AF37;     /* Gold */
 }
 
@@ -40,9 +40,18 @@ body {
     backdrop-filter: blur(8px); 
 }
 
+/* --- MOBILE OPTIMIZATION (FIXED) --- */
 @media (max-width: 600px) {
     body { padding: 0 !important; }
-    .container { min-height: 100vh; border-radius: 0; border: none; display: flex; flex-direction: column; justify-content: center; }
+    .container { 
+        min-height: 100vh; 
+        border-radius: 0; 
+        border: none; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center; /* <--- This line fixes the centering */
+    }
     .link-btn, .cv-split-wrapper { width: 100%; box-sizing: border-box; }
 }
 
@@ -77,21 +86,20 @@ p { line-height: 1.6; font-size: 0.95rem; margin-bottom: 2rem; }
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
-/* --- CV SPLIT BUTTON (Matched Border) --- */
+/* --- CV SPLIT BUTTON --- */
 .cv-split-wrapper { position: relative; display: block; z-index: 100; margin-bottom: 12px; }
 
 .cv-split-btn { 
     display: flex; 
     align-items: stretch; 
     background: var(--btn-bg);
-    border: 1px solid var(--btn-border); /* Removed Cyan border to match others */
+    border: 1px solid var(--btn-border);
     border-radius: 6px; 
     transition: all 0.3s ease; 
     height: 54px; 
     overflow: hidden; 
 }
 
-/* Hover Effect: Turns Gold like others */
 .cv-split-wrapper:hover .cv-split-btn { 
     border-color: var(--accent); 
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); 
@@ -132,7 +140,7 @@ p { line-height: 1.6; font-size: 0.95rem; margin-bottom: 2rem; }
     position: absolute;
     top: 110%; right: 0; left: 0;
     background: #000;
-    border: 1px solid var(--neon-cyan); /* Kept Cyan as requested for the enhanced layout */
+    border: 1px solid var(--neon-cyan); 
     border-radius: 6px;
     padding: 8px 0;
     opacity: 0;
